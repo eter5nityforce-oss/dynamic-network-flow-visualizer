@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Network Flow Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="ui-container">
+        <h1>동적 네트워크 흐름 시각화 대시보드</h1>
+        <div id="controls">
+            <h2>Temporal Playback</h2>
+            <input type="range" id="playback-slider" min="0" max="100" value="100" style="width: 100%;">
+
+            <h2>Filters</h2>
+            <input type="text" id="node-filter" placeholder="Filter nodes by ID...">
+
+            <h2>Graph Algorithms</h2>
+            <!-- Add algorithm controls here -->
+        </div>
+        <div id="details-panel" style="margin-top: 20px;">
+            <h2>Details</h2>
+            <div id="details-content">
+                <p>Select a node or edge to see details.</p>
+            </div>
+        </div>
+    </div>
+    <canvas id="network-canvas"></canvas>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
